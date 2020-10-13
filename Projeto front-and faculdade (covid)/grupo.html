@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fotos.css">
+</head>
+
+<body>
+    <div id='area-cab'>
+        <div id="area-logo">
+            <h1>Info<span class="branco">Corona</span></h1>
+        </div>
+        <div id="area-menu">
+            <a href="index.html">Home</a>
+            <a href="covid.html">Corona Virus (COVID-19)</a>
+            <a href="vacina.html">Vacinas do(COVID-19)</a>
+            <a href="imc.html">IMC</a>
+            <a href="grupo.html">Grupo APS/Prova</a>
+            <a href="A1/index.html">Situaão do Covid no Mundo</a>
+
+        </div>
+    </div>
+
+
+
+    <div id="area">
+        <div id="postagem">
+            <div id="post">
+                <h2> Grupos</h2>
+                <span class="datapo"> postado 05 de outubro 2020</span>
+                <div id="mapa"></div>
+
+
+
+                <article>
+
+                    <p>FOTOS DOS INTEGRANDES DO GRUPO DA APS</p>
+
+                    <ul id="album-fotos">
+                        <li id="foto01"><span>Wesley</span></li>
+                        <li id="foto02"><span>Isaura</span></li>
+                        <li id="foto03"><span>Michael</span></li>
+
+                    </ul>
+
+                </article>
+
+
+
+                <script>
+                    function inicializar() {
+                        var coordenadas = {
+                            lat: -22.869344,
+                            lng: -43.374651
+                        };
+
+                        var mapa = new google.maps.Map(document.getElementById('mapa'), {
+                            zoom: 15,
+                            center: coordenadas
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: coordenadas,
+                            map: mapa,
+                            title: 'Casa do Michael'
+                        });
+                    }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaXwF9Hslvmsqi3AQ5eHE1XawQEexn2DM&callback=inicializar">
+                </script>
+                </section>
+
+
+            </div>
+
+
+
+            <nav id="horario">
+                <div id="data">
+                    <div id="dataa"> </div>
+
+            </nav>
+
+
+
+            <script src="js/js.js "></script>
+
+            <div id="rodape">
+                Todos os direitos resevardos
+            </div>
+            </div>
+</body>
+
+</html>

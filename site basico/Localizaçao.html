@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacinação em dia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fotos.css">
+</head>
+
+<body>
+
+
+    <div id="interface">
+
+
+
+        <nav id="anti-menu">
+            <img src="img/logo-vacinacao.png" alt="">
+
+            <nav id=menu>
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="COVID-19.html" id="covidme">Covid </a></li>
+                    <li><a href="vacinas.html">Vacinas do COVID</a></li>
+                    <li><a href="imc.html">IMC</a></li>
+                    <li><a href="Localizaçao.html">Organização</a></li>
+
+                </ul>
+            </nav>
+        </nav>
+
+
+        <section id="corpo">
+
+            <section id="cobri">
+
+            </section>
+
+            <h2 id='h2'>Integrandes do GRUPO</h2>
+            <div id="mapa"></div>
+
+
+
+            <article>
+
+                <p>FOTOS DOS INTEGRANDES DO GRUPO DA APS</p>
+
+                <ul id="album-fotos">
+                    <li id="foto01"><span>Wesley</span></li>
+                    <li id="foto02"><span>Isaura</span></li>
+                    <li id="foto03"><span>Michael</span></li>
+
+                </ul>
+
+            </article>
+
+
+
+            <script>
+                function inicializar() {
+                    var coordenadas = {
+                        lat: -22.869344,
+                        lng: -43.374651
+                    };
+
+                    var mapa = new google.maps.Map(document.getElementById('mapa'), {
+                        zoom: 15,
+                        center: coordenadas
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: coordenadas,
+                        map: mapa,
+                        title: 'Casa do Michael'
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaXwF9Hslvmsqi3AQ5eHE1XawQEexn2DM&callback=inicializar">
+            </script>
+        </section>
+
+        <footer id="rodape">
+            <p>Copyright 2020 - by Michael / Wesley/ Isaura
+
+            </p>
+        </footer>
+
+    </div>
+
+
+
+    <nav id="horario">
+        <div id="data">
+            <div id="dataa"> </div>
+
+    </nav>
+
+
+
+    <script src="js/js.js "></script>
+</body>
+
+</html>
