@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ 
+
+let parOuimpar = (x) =>{
+    let resto  = x%2 
+
+    if(resto == 1){
+        document.write('impar')
+    }else{
+        document.write('par')
+    }
+}
+
+parOuimpar(3)
+
+</script>
+
+</html>

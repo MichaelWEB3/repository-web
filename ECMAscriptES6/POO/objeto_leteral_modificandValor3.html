@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+
+let pessoa = {
+    nome:'maria',
+    idade:25
+}
+
+
+
+let pessoa1  = pessoa
+
+
+console.log(pessoa1)
+
+pessoa.sexo = 'Masculino'
+
+pessoa.dizOi = ()=> console.log("ola")
+
+
+console.log(pessoa1)
+
+pessoa1.dizOi()
+</script>
+
+</html>

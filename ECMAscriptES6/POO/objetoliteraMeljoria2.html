@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+
+let nome = 'joger'
+let idade= 29
+let sexo = 'masculino'
+let profissao = 'programador'
+
+
+
+let objeto = {
+    nome: nome,
+    idade: idade,
+    sexo: sexo,
+    profissao: profissao,
+    exibir: function(){
+        console.log(`${this.nome} ${this.idade} anos ${this.sexo} ${this.profissao}` )
+    }
+}
+
+objeto.exibir()
+//melhoria
+
+
+let objeto2 = {
+     nome,
+     idade,
+     sexo,
+     profissao,
+    exibir (){
+        console.log(`${this.nome} ${this.idade} anos ${this.sexo} ${this.profissao}` )
+    }
+}
+
+
+objeto2.exibir()
+
+</script>
+
+</html>

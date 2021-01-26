@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ 
+ let a1={
+     cor:'banco',
+     modelo:'airBoss a115',
+     levamtarvoo(){
+         console.log('levantar voo')
+     }
+ }
+
+  let aviaoF = function(){
+    this.cor ='azul',
+    this.modelo ='airBoss b 54514',
+    this.levantarVo = function(){
+        console.log('leventar voo')
+    }
+       
+  }
+
+
+  let a2 =  new aviaoF();
+
+  class AvicaoC{
+      constructor(){
+          this.cor='vermelho',
+          this.modelo='embari JEts'
+          
+      }
+      levantarVo(){
+          console.log("levantar voo")
+      }
+  }
+
+  let a3 = new AvicaoC()
+
+
+  console.log(a1)
+  console.log(a2)
+  console.log(a3)
+
+
+  let animal = {at1:'a'}
+  let vertebrado = {__proto__:animal, at2:'b'}
+  let  ave = {__proto__:vertebrado ,
+      at3:'c'
+    }
+
+
+  console.log(ave.at1)
+
+</script>
+
+</html>

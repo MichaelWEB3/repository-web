@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ //softwerre marcenaria
+//objeto cadeira  esofa
+
+
+//paradigma procedural
+//cadeira 
+
+/*
+let cadeira = Array()
+cadeira[0] = Array()
+
+cadeira[0]['qt_pernas'] = 3
+cadeira[0]['giratoria'] = true
+cadeira[0]['cor'] = 'red'
+
+cadeira[1] = Array()
+cadeira[1]['qt_pernas'] = 4
+cadeira[1]['giratoria'] = false
+cadeira[1]['cor'] = 'blue'
+
+function gira_cadeira(indice){
+     if(cadeira[indice]['giratoria'] == true){
+            console.log('giratoria')
+    }else{
+        console.log("nao giratoria")
+    }
+}
+
+gira_cadeira(1)
+*/
+
+//paradigma oo
+
+class Cadeira{
+       constructor(qt_pernas,giratoria,cor){
+
+        this.qt_pernas = qt_pernas
+        this.giratoria = giratoria
+        this.cor = cor
+           
+       }
+
+
+       gorarCadeira(){
+           if(this.giratoria == true){
+               console.log("cadeira giratoria")
+           }else{
+               console.log("cadeira nao giratoria")
+           }
+
+
+       }
+}
+let cadeira = new Cadeira(4,false,'blue')
+let cadeira2 = new Cadeira(3,true,'red')
+cadeira.gorarCadeira()
+cadeira2.gorarCadeira()
+
+
+let cadeiras = Array()
+
+cadeiras.push(cadeira = new Cadeira(4,false,'blue'),cadeira2 = new Cadeira(3,true,'red') )
+
+console.log(cadeiras)
+
+
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+
+let Carro = function(){
+ this.cor = 'amarelo'
+ this.modelo= 'chevet'
+ this.velocidadeAtual = 0
+ this.velocidadeMaxima = 120
+
+ this.acelerar =function () {
+       // this.velocidadeAtual +=10
+       var velocidade = this.getVlocidadeAtual()+10
+
+       this.setVelocidade(velocidade)
+ }
+
+
+ this.getVlocidadeAtual = function(){
+     return this.velocidadeAtual
+ }
+
+ this.setVelocidade = function(velocidadeAtual){
+      this.velocidadeAtual = velocidadeAtual
+ }
+
+}
+
+let carros = new Carro()
+
+console.log(`velocidade atual: ${carros.getVlocidadeAtual()}`)
+carros.acelerar()
+carros.acelerar()
+carros.acelerar()
+console.log(`velocidade atual: ${carros.getVlocidadeAtual()}`)
+</script>
+
+</html>

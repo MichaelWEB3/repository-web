@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ 
+//objeto
+ class ContaBancaria {
+    // agencia
+    // numeroConta
+    // consultarSaldo
+    // limite
+        constructor(){
+            this.agencia = 1
+            this.Numeroconta = 57
+            this.saldo = 50
+            this.limite = 450
+        }
+       
+        depositar(valorDepo){
+             this.saldo += valorDepo
+        }
+
+        sacar(valorSaque){
+            this.saldo -= valorSaque
+        }
+
+        consultar(){
+           return this.saldo
+
+        }
+    
+    }
+
+let conta1 = new ContaBancaria()
+
+
+conta1.depositar(500)
+conta1.sacar(100)
+console.log(conta1.consultar())
+ 
+
+</script>
+
+</html>

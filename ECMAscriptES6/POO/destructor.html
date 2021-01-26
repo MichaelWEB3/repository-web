@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+
+//tirar valor de uma estrutura
+
+
+let  frutas = ['abacaxi','uva','pera']
+
+let [a,b,c] = frutas
+
+console.log(a,b,c)
+
+let coisas = [['abacaxi','uva','pera'],['maria','jão'] ]
+let[[,,f],[,x]] = coisas
+
+
+console.log(f,x)
+
+
+//aplicar em objetos
+
+let produto={
+    descricao:'notbook',
+    preco:1500,
+    detalhes: {
+        fabricante:'abc',
+        modelo:15151
+    }
+}
+
+let{descricao,preco} = produto
+
+console.log(descricao,preco)
+
+//
+
+
+let{descricao:n,preco:y,desconto=5, detalhes:{fabricante:t,modelo:o}} = produto
+
+console.log(n,y,desconto,t,o)
+
+</script>
+
+</html>

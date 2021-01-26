@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ 
+///espalhar =spreed // rest =juntar
+
+//contexto spreed
+
+let article = 'como ultilizar operador rest e spreend'
+
+console.log([...article])           
+
+let listaCursos1 =['nodeks e mongo db','es6 anguar 4']
+let listaCursos2 =['js e php ','html bodstrap4']
+let lisCursosCompleto =['webcompleto','andoire completo',...listaCursos1,...listaCursos2]
+console.log(lisCursosCompleto)
+
+
+
+let pessoa = {
+    nome:'joao',
+    idade:27,
+
+}
+
+let clone = {
+    endereco:'Rua abc',
+    ...pessoa
+}
+
+console.log(clone)
+
+//contexto rest
+function soma(...param){
+ let resu = 0
+
+ param.forEach(v => resu +=v )
+ return resu
+}
+
+console.log(soma(3,5,4,7,-50,245))
+
+function mult(m,...valor){
+    let resu = 0
+    console.log(m)
+    console.log(valor)
+
+    valor.forEach(v => resu += m*v)
+
+    return resu
+    
+}
+
+
+console.log(mult(5,4,8,4,9))
+
+</script>
+
+</html>

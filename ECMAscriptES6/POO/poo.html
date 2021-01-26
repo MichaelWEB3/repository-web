@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+
+let pessoa2 = {
+    nome:'rodrigo',
+    idade:18,
+    sexo:'m'
+}
+
+
+let mosntraNo = function(){
+
+
+    this.carro = 'corola'
+
+    this.mosntrarCar = function(){
+        console.log(this.carro)
+    }
+}
+
+
+let carro = new mosntraNo()
+
+carro.mosntrarCar()
+
+
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+ 
+//objeto
+ class ContaBancaria {
+     constructor(){
+         this.agencia 
+         this.conta 
+         this.saldo 
+         this.limite = 500;
+     }
+  
+   depositar(){
+      this.agencia = prompt("agencia")
+      this.cont = prompt("conta")
+      this.saldo= prompt("saldo a ser depositado")
+      
+
+   }
+
+  sacar(){
+      this.agencia = this.saldo -  prompt("sacar")
+  }
+
+  consultarSaldo(){
+      alert(this.agencia)
+      alert(this.cont)
+      alert(this.saldo) 
+      alert(this.limite)
+  }
+
+
+    }
+
+
+    var x  = new ContaBancaria;
+
+
+   var acao = prompt("oque deseja fazer (1)depostiar (2)sacar (3)saldo ")
+    if(acao == '1'){
+       x.depositar()
+       acao = prompt("oque deseja fazer (1)depostiar (2)sacar (3)saldo ")
+   
+    }
+
+    if(acao == '2'){
+        x.sacar()
+        acao = prompt("oque deseja fazer (1)depostiar (2)sacar (3)saldo ")
+   
+    }
+
+    if(acao =='3'){
+        x.consultarSaldo()
+        acao = prompt("oque deseja fazer (1)depostiar (2)sacar (3)saldo ")
+   
+    }
+
+
+</script>
+
+</html>
