@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <h1>Sistema sorria Feliz</h1>
+    <p>Sistema de cadastro de orçamentos no banco de dados</p>
+    <form action="/add" method="POST">
+
+        <div class="row">
+     
+            <div class="col-sm-10 p-5" >
+                  <h2 class="">Nome</h2>  <input type="text"  class="form-control form-control-lg" id="tarefa" name="nome"placeholder="Nome do paciente">
+                   <h2 class="">Email</h2>  <input type="text"  class="form-control form-control-lg" id="tarefa" name="email"placeholder="email do paciente">
+                    <h2 class="">Idade</h2>  <input type="number"  class="form-control form-control-lg" id="tarefa" name="idade"placeholder="idade do paciente">
+                     <h2 class="">Serviços</h2>  <input type="text"  class="form-control form-control-lg" id="tarefa" name="servico"placeholder="serico">
+                      <h2 class="">orçamentos</h2>  <input type="number"  class="form-control form-control-lg" id="tarefa" name="ocamento"placeholder="orcamento">
+
+            </div>
+
+
+            <button type="submit" class="btn btn-danger d-grid gap-2 col-6 mx-auto mt-5 mb-5">Cadastar</button>
+
+    </form>
+
+
+
+    <div class="div2">
+        <h1>Pacientes cadastrados</h1>
+
+
+        {{#each posts}}
+      Paciente:  {{dataValues.nome}} Idade: {{dataValues.idade }}  email: {{dataValues.email }} orcamento : ${{dataValues.ocamento }} tratamento: {{dataValues.servico }}  
+        <a href="/{{dataValues.id}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+            <hr>
+            {{/each}}
+
+    </div>
+</div>
