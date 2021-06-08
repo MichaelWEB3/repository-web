@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"> <i class="bi bi-easel"></i> Poste_Tudo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+
+                <a class="nav-link" href="/">perfil</a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="row alert alert-info align-items-center">
+    <div class="col">
+  <h4> <i class="bi bi-person-fill text-danger " > - {{info.nome}}</i> </h4> 
+    </div>
+    <div class="col">
+     <h4 class="text-danger"> <i class="bi bi-emoji-laughing">{{info.apelido}}</i></h4>
+    </div>
+    <div class="col">
+   <h4 class="text-danger"><i class="bi bi-at"></i> {{info.email}}</h4>
+    </div>
+
+</div>
+    <div class="card-body">
+        
+        <div class="card">
+            <div class="card-body">
+                <form action="/perfil/addPoste/{{info.email}}/{{info.nome}}/{{info.apelido}}" method="POST">
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+                        <input type="text" name="titulo" class="form-control" id="exampleFormControlInput1"
+                            placeholder="digite titulo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Conteudo</label>
+                        <textarea class="form-control" name="conteudo" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success col-2 position-relative  m-4 top-50 start-50 translate-middle" > <i class="bi bi-pencil-square"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<div class="card">
+    <div class="card-body">
+           {{ info.postagem}}
+    </div>
+</div>
